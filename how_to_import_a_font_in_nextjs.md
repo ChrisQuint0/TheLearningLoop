@@ -35,20 +35,11 @@ return (
 );
 ```
 
-## 4. Update `globals.css`
-
-Inside your `globals.css`, add the font variable under the `@theme inline` directive:
-
-```css
-@theme inline {
-  --font-press-start: var(--font-press-start);
-}
-```
-
-## 5. Use the Font in Your Pages
+## 4. Use the Font in Your Pages
 
 You can now apply the font anywhere in your project using Tailwind’s `font-press-start` class:
 
 ```jsx
 <h1 className="font-press-start">Hello</h1>
 ```
+
