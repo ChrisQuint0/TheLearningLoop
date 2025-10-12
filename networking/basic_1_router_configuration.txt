@@ -1,0 +1,75 @@
+Basic 1 Router Configuration in CISCO
+
+Contents:
+
+Topology
+Computer's IP Addressing
+Commands to be done on the terminal
+
+
+Setup the Topology
+
+Setup 6 Computers 
+Get two 2960 switches
+Get one 2811 router
+
+Connect the first three computer to the switches in their fastethernet ports using a straight through cable
+
+Connect the last three computers to the switches in their fastethernet ports using a straight through cable
+
+Connect the 1st switch to the router on fastethernet 0/0 and the 2nd switch to fastethernet 0/1 of the router
+
+Get a console cable on the connections and connect it to pc1 on the rs232 port and then connect it
+to the router on its console port
+
+Set the static ipv4 address of the computers
+
+Network A's Address 192.168.0.0/24
+
+Set the all the computer's ip address in Network A to the last
+Usable host of its network.
+
+192.168.0.254 is the last usable host so we're just gonna
+go down from there
+
+PC 1 192.168.0.254
+PC 2 192.168.0.253
+PC 3 192.168.0.252
+
+Network B's Address 10.0.0.0/8
+
+Same thing with network A set the computer's ip addresses to the last 3 usable host of the network
+
+PC 1 10.0.0.254
+PC 2 10.0.0.253
+PC 3 10.0.0.252
+
+
+Set the router's ip address
+Click pc1 => desktop => terminal and then do these commands.
+
+
+enable
+configure terminal
+hostname PLP
+
+line con 0
+password PLP
+login
+exit
+
+enable password CISCO
+service password-encryption
+
+interface fa0/0
+no shutdown
+ip address 192.168.0.1 255.255.255.0
+
+interface fa0/1
+no shutdown
+ip address 10.0.0.1 255.0.0.0
+
+do show ip interface brief
+
+do copy running-config startup-config
+
