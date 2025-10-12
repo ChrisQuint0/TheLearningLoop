@@ -1,0 +1,53 @@
+Networking II Console Connection Setup
+
+1. Connect the console cable to the console port of the router.
+
+2. On your PC, open Device Manager.
+
+Go to Ports (COM & LPT).
+
+Note the COM port (e.g., USB Serial (COM13)).
+
+3. If there’s no driver installed:
+
+Right-click → Update Driver.
+
+Select Search automatically for drivers.
+
+Install/Update as needed.
+
+---
+
+Accessing Router via PuTTY
+
+1. Open PuTTY.
+
+
+2. Select Serial connection type.
+
+
+3. Input COM port (e.g., COM13) in Serial line.
+
+
+4. Click Open.
+
+---
+
+TODO: Network Setup
+
+1. Connect router to switch.
+
+
+2. Use remaining 4 cables to connect laptops.
+
+---
+
+Telnet Configuration on Router
+
+1. From router CLI, configure Telnet access:
+
+line vty 0 4
+password PLP
+login
+exit
+do wr
