@@ -1,5 +1,3 @@
----
-
 ## **Complete Guide: Configuring Basic DHCPv4 on a Router**
 
 ### **Topology**
